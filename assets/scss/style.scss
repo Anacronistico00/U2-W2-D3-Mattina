@@ -1,7 +1,50 @@
-$colore-primario:red;
-$main-margin-top: 30px;
+@use 'partials/title';
 
-h1 {
-    color: $colore-primario;
-    margin-top: $main-margin-top;
-}   
+@use 'partials/subtitle';
+
+@use 'partials/table';
+
+@import 'mixins/mixin';
+
+header {
+  @include primaryColor;
+}
+
+#studentsList {
+  color: black;
+}
+
+.esempio {
+  background-color: green;
+  h1 {
+    color: grey;
+    &.title {
+      font-size: 52px;
+    }
+  }
+  .paragraph {
+    background-color: cyan;
+    color: maroon;
+    .evidence {
+      font-weight: bold;
+    }
+  }
+  .childButton {
+    background-color: blue;
+    color: white;
+    &:hover {
+      background-color: red;
+    }
+  }
+}
+
+.innerParagraph {
+  @include internalText(1.5rem, bold);
+  span {
+    @include internalText(2rem, normal);
+  }
+}
+
+.myContainer {
+  @include interpolation('color', lightgrey);
+}
