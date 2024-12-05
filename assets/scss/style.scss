@@ -48,3 +48,33 @@ header {
 .myContainer {
   @include interpolation('color', lightgrey);
 }
+
+.condition {
+  font-weight: bold;
+  @include colorCondition(false);
+}
+
+.subtitleCond {
+  font-size: 2em;
+  font-weight: bold;
+  @include colorCondition(true);
+}
+
+.images {
+  position: relative;
+}
+
+.images img {
+  max-width: 15%;
+  border: 2px solid pink;
+  position: absolute;
+}
+
+@for $i from 1 to 5 {
+  #img#{$i} {
+    $top: 150 * $i;
+    $left: 150 * $i;
+    top: #{$top}px;
+    left: #{$left}px;
+  }
+}

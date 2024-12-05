@@ -70,4 +70,43 @@ header {
   background-color: lightgrey;
 }
 
-/*# sourceMappingURL=style.css.map */
+.condition {
+  font-weight: bold;
+  color: green;
+}
+
+.subtitleCond {
+  font-size: 2em;
+  font-weight: bold;
+  color: red;
+}
+
+.images {
+  position: relative;
+}
+
+.images img {
+  max-width: 15%;
+  border: 2px solid pink;
+  position: absolute;
+}
+
+#img1 {
+  top: 150px;
+  left: 150px;
+}
+
+#img2 {
+  top: 300px;
+  left: 300px;
+}
+
+#img3 {
+  top: 450px;
+  left: 450px;
+}
+
+#img4 {
+  top: 600px;
+  left: 600px;
+}/*# sourceMappingURL=style.css.map */

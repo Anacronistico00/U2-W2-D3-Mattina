@@ -15,3 +15,11 @@
 @mixin interpolation($element, $value) {
   background-#{$element}: $value;
 }
+
+@mixin colorCondition($boolean) {
+  @if $boolean {
+    color: red;
+  } @else {
+    color: green;
+  }
+}
